@@ -9,6 +9,38 @@
   <link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin="">
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <header class="page-header">
+    <div class="page-header__wrapper centerer">
+      <nav class="page-header__navigation">
+          <a class="page-header__logo">
+            <img class="page-header__logo-image" src="img/logo.svg" alt="Лого">
+            <div class="page-header__logo-wrapper">
+              <span class="page-header__logo-head">Smart Device</span>
+              <span class="page-header__logo-capture">умные технологии</span>
+            </div>
+          </a>
+          <button class="page-header__menu-button" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+      </nav>
+      <div class="page-header__contacts">
+        <div class="page-header__email">
+          <a href="mailto:info@sd.ru">info@sd.ru</a>
+        </div>
+        <div class="page-header__phone">
+          <a href="tel:+74950005252">+7 (495) 000 52 52</a>
+        </div>
+        <button class="page-header__order-call" type="button">Заказать звонок</button>
+      </div>
+    </div>
+
+    <section class="page-header__profile-info">
+      <div>
+        <h1 class="page-header__profile">Печатные платы</h1>
+        <p class="page-header__profile-caption">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+      </div>
+      <img class="page-header__profile-image" src="img/plates.svg" alt="Печатные платы">
+    </section>
+  </header>
 </body>
 </html>
