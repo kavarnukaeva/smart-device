@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart Device</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
   <header class="page-header">
-    <div class="page-header__wrapper centerer">
+    <div class="page-header__wrapper">
       <nav class="page-header__navigation">
+          <!-- На главной ссылка неактуальна -->
           <a class="page-header__logo">
             <img class="page-header__logo-image" src="img/logo.svg" alt="Лого">
             <div class="page-header__logo-wrapper">
               <span class="page-header__logo-head">Smart Device</span>
-              <span class="page-header__logo-capture">умные технологии</span>
+              <span class="page-header__logo-caption">умные технологии</span>
             </div>
           </a>
           <button class="page-header__menu-button" type="button">
@@ -35,11 +35,15 @@
     </div>
 
     <section class="page-header__profile-info">
-      <div>
+      <div class="page-header__profile-info-wrapper">
         <h1 class="page-header__profile">Печатные платы</h1>
         <p class="page-header__profile-caption">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <button class="page-header__profile-button" type="button">Получить бесплатную консультацию</button>
+        <button class="page-header__profile-button page-header__profile-button--mobile" type="button">Бесплатная консультация</button>
       </div>
-      <img class="page-header__profile-image" src="img/plates.svg" alt="Печатные платы">
+      <div class="page-header__profile-image-wrapper">
+        <img class="page-header__profile-image" src="img/plates.png" alt="Печатные платы">
+      </div>
     </section>
   </header>
 </body>
