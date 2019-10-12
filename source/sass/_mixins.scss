@@ -1,0 +1,12 @@
+@mixin centerer() {
+  max-width: 1410px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    max-width: $tablet-width;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: $mobile-width;
+  }
+}
