@@ -10,3 +10,27 @@
     max-width: $mobile-width;
   }
 }
+
+@mixin centerer-main() {
+  max-width: calc(1170px + 50px);
+  margin: 0 auto;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  @media (max-width: $tablet-width) {
+    max-width: $tablet-width;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: $mobile-width;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@mixin reset-list() {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
