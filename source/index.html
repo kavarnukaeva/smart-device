@@ -46,5 +46,38 @@
       </div>
     </section>
   </header>
-</body>
+
+  <main class="page-main">
+    <section class="feedback">
+        <div class="feedback__image-wrapper">
+          <img class="feedback__image" src="img/airplane.png>" alt="Бумажный самолёт">
+        </div>
+        <div class="feedback__form-wrapper">
+          <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
+          <p class="feedback__title-caption">Мы проконсультируем Вас бесплатно</p>
+          <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="feedback__items-wrapper">
+              <p class="feedback__item">
+                <label class="visually-hidden" for="fullname-field">Имя</label>
+                <input type="text" name="fullname" id="fullname-field" placeholder="Имя" required>
+              </p>
+              <p class="feedback__item">
+                <label class="visually-hidden" for="phone-field">Телефон</label>
+                <input type="tel" name="tel" id="phone-field" placeholder="Телефон" required>
+              </p>
+              <p class="feedback__item">
+                <label class="visually-hidden" for="message-field">Ваш вопрос</label>
+                <textarea name="message" id="message-field" placeholder="Ваш вопрос" required></textarea>
+              </p>
+            </div>
+            <button class="feedback__button" type="submit">Задать вопрос</button>
+            <div class="feedback__checkbox-wrapper">
+              <input class="feedback__checkbox visually-hidden" type="checkbox" name="checkbox" id="feedback-checkbox" checked="">
+              <label class="feedback__checkbox-label" for="feedback-checkbox">Я согласен на обработку персональных данных</label>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
