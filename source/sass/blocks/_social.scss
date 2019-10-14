@@ -1,0 +1,13 @@
+.social__list {
+  @include reset-list();
+
+  display: flex;
+
+  @media (max-width: $tablet-width) {
+    width: 112px;
+  }
+}
+
+.social__item {
+  margin-right: 15px;
+}
