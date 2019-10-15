@@ -1,0 +1,133 @@
+.services {
+  background-color: #1b2d37;
+}
+
+.services__wrapper {
+  @include centerer-main();
+
+  padding-top: 90px;
+  padding-bottom: 127px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 50px;
+    padding-bottom: 34px;
+  }
+}
+
+.services__title {
+  margin: 0;
+  margin-bottom: 52px;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.4;
+  font-family: $robotocondensed-font;
+  color: $font-color--primary;
+
+  @media (max-width: $tablet-width) {
+    padding-right: 90px;
+
+    font-size: 32px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+  }
+}
+
+.services__list {
+  @include reset-list();
+
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.services__item-wrapper {
+  width: calc(33% - 15px);
+  height: 620px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    height: 256px;
+    margin-bottom: 45px;
+  }
+}
+
+.services__item {
+  position: relative;
+
+  display: block;
+  height: 100%;
+  padding-top: 50px;
+  padding-left: 43px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 63px;
+    height: 63px;
+    background-color: $brand-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 27px;
+    bottom: 26px;
+
+    width: 6px;
+    height: 10px;
+    background-image: url("#{$image-dir}/arrow.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 39px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 35px;
+  }
+
+  &--production {
+    background-image: url("#{$image-dir}/plates-production.png");
+  }
+
+  &--setup {
+    background-image: url("#{$image-dir}/plates-setup.png");
+  }
+
+  &--utilities {
+    background-image: url("#{$image-dir}/utilities.png");
+  }
+}
+
+.services__service-type {
+  margin: 0;
+  padding: 0;
+  padding-right: 155px;
+  font-family: $robotocondensed-font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: $font-color--primary;
+
+  @media (max-width: $tablet-width) {
+    padding-right: 505px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-right: 85px;
+  }
+}
