@@ -1,0 +1,138 @@
+.company-info__wrapper {
+  @include centerer-main();
+  padding-top: 98px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 23px;
+  }
+}
+
+.company-info__information {
+  position: relative;
+
+  padding-bottom: 110px;
+  padding-left: 180px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 84px;
+    padding-left: 187px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 66px;
+    padding-left: 0;
+  }
+}
+
+.company-info__image-wrapper {
+  position: absolute;
+  top: 4px;
+  left: -26px;
+
+  @media (max-width: $tablet-width) {
+    top: 0;
+    left: -33px;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.company-info__image {
+  width: 210px;
+  height: 317px;
+
+  @media (max-width: $tablet-width) {
+    width: 250px;
+    height: 360px;
+  }
+}
+
+.company-info__title,
+.company-info__caption {
+  margin: 0;
+  padding: 0;
+}
+
+.company-info__title {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.4;
+  font-family: $robotocondensed-font;
+  color: $font-color--secondary;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 25px;
+    font-size: 32px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+}
+
+.company-info__caption {
+  padding-right: 2px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: $brand-font;
+  color: $font-color--secondary;
+
+  &--first {
+    margin-bottom: 20px;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &--second {
+    @media (max-width: $tablet-width) {
+      margin-bottom: 29px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 41px;
+    }
+  }
+
+  &--third {
+    margin-bottom: 40px;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.company-info__continue {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: inline-block;
+  }
+}
+
+.company-info__button {
+  padding: 13px 50px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  font-family: $robotocondensed-font;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $brand-color;
+
+  background: none;
+  border: 1px solid $brand-color;
+  border-radius: 5px;
+}
