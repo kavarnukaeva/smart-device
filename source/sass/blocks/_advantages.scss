@@ -1,0 +1,125 @@
+.advantages__wrapper {
+  @include centerer-main();
+
+  padding-top: 108px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 55px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 37px;
+  }
+}
+
+.advantages__list {
+  @include reset-list();
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.advantages__item {
+  position: relative;
+
+  width: calc(50% - 15px);
+  margin-bottom: 31px;
+  padding-top: 40px;
+  padding-left: 41px;
+  padding-bottom: 66px;
+  border: 1px solid #ebebeb;
+  border-left: 3px solid $brand-color;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 23px;
+    padding-bottom: 19px;
+    padding-left: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 24px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    background-color: $brand-color;
+
+    h3,
+    p {
+      color: $font-color--primary;
+    }
+
+    svg .advantages__icon {
+      fill: #ffffff;
+    }
+  }
+
+  svg {
+    margin-bottom: 17px;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.advantages__title,
+.advantages__caption {
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__title {
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  font-family: $robotocondensed-font;
+  color: $brand-color;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 20px;
+  }
+
+  &--confidentiality {
+    @media (max-width: $mobile-width) {
+      padding-right: 15px;
+    }
+  }
+}
+
+.advantages__caption {
+  padding-right: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: $brand-font;
+  color: $font-color--secondary;
+
+  @media (max-width: $tablet-width) {
+    padding-right: 28px;
+  }
+
+  &--suppliers {
+    @media (max-width: $mobile-width) {
+      padding-right: 0;
+    }
+  }
+}
