@@ -1,0 +1,16 @@
+.page-main__wrapper {
+  background-image: url("#{$image-dir}/polygons-group-main.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 20% -530px;
+
+  @media (max-width: $tablet-width) {
+    background-size: 249%;
+    background-position: 30% -95%;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-size: 1651px;
+    background-position: 43% 16%;
+  }
+}

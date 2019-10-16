@@ -5,15 +5,19 @@
   padding-left: 25px;
 
   background-color: #1b2d37;
-  background-image: url("#{$image-dir}/background-pattern.png");
+  background-image: url("#{$image-dir}/background-pattern.png"),
+    url("#{$image-dir}/polygons-group.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover, 100%;
+  background-position: left, center;
 
   overflow: hidden;
 
   @media (max-width: $tablet-width) {
     padding-top: 19px;
     padding-bottom: 5px;
+    background-size: cover, 1515px 750px;
+    background-position: left, center -145px;
   }
 
   @media (max-width: $mobile-width) {
@@ -21,6 +25,8 @@
     padding-right: 15px;
     padding-bottom: 0;
     padding-left: 15px;
+    background-size: cover, 1445px 670px;
+    background-position: left, 56% -140px;
   }
 }
 

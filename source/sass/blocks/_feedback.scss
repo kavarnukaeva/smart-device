@@ -1,5 +1,13 @@
 .feedback {
+  background-image: url("#{$image-dir}/polygons-group-form.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
   background-color: $brand-color;
+
+  @media (max-width: $tablet-width) {
+    background-image: none;
+  }
 }
 
 .feedback__wrapper {
