@@ -65,12 +65,12 @@
 
 .modal__button-close {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 20px;
+  right: 20px;
 
   display: block;
-  width: 33px;
-  height: 33px;
+  width: 17px;
+  height: 17px;
 
   border: none;
   cursor: pointer;
@@ -81,21 +81,21 @@
     content: "";
     position: absolute;
 
-    width: 23px;
+    width: 22px;
     height: 2px;
     border-radius: 5px;
     background-color: #ffffff;
   }
 
   &::before {
-    top: 4px;
-    left: 19px;
+    top: 6px;
+    right: 0;
     transform: rotate(44deg);
   }
 
   &::after {
-    top: 4px;
-    left: 19px;
+    top: 6px;
+    right: 0;
     transform: rotate(-44deg);
   }
 }
