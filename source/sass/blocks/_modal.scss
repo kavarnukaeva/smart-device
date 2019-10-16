@@ -13,27 +13,54 @@
   background-color: $brand-color;
   transform: translateX(-50%);
 
-  .feedback__title {
+  & > h2 {
     position: relative;
+    margin: 0;
+    margin-bottom: 9px;
+    font-weight: 400;
     font-size: 28px;
+    line-height: 1.4;
+    font-family: $robotocondensed-font;
+    color: $font-color--primary;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 17px;
+      font-size: 32px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 13px;
+      font-size: 28px;
+    }
   }
 
-  .feedback__title-caption {
+  & > p {
+    margin: 0;
     margin-bottom: 17px;
     padding-right: 7px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: $brand-font;
+    color: $font-color--primary;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 10px;
+    }
   }
 
   .feedback__item {
     width: 100%;
     margin-bottom: 23px;
 
+    input,
+    textarea {
+      padding-left: 23px;
+    }
+
     textarea {
       min-height: 100px;
     }
-  }
-
-  .feedback__item-fields {
-    padding-left: 23px;
   }
 
   .feedback__footer-wrapper {

@@ -12,29 +12,51 @@
     padding-top: 50px;
     padding-bottom: 34px;
   }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 52px;
+    padding: 0;
+
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.4;
+    font-family: $robotocondensed-font;
+    color: $font-color--primary;
+
+    @media (max-width: $tablet-width) {
+      padding-right: 90px;
+
+      font-size: 32px;
+    }
+
+    @media (max-width: $mobile-width) {
+      font-size: 28px;
+    }
+  }
 }
 
-.services__title {
-  margin: 0;
-  margin-bottom: 52px;
-  padding: 0;
-
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 1.4;
-  font-family: $robotocondensed-font;
-  color: $font-color--primary;
-
-  @media (max-width: $tablet-width) {
-    padding-right: 90px;
-
-    font-size: 32px;
-  }
-
-  @media (max-width: $mobile-width) {
-    font-size: 28px;
-  }
-}
+// .services__title {
+//   margin: 0;
+//   margin-bottom: 52px;
+//   padding: 0;
+//
+//   font-weight: 400;
+//   font-size: 36px;
+//   line-height: 1.4;
+//   font-family: $robotocondensed-font;
+//   color: $font-color--primary;
+//
+//   @media (max-width: $tablet-width) {
+//     padding-right: 90px;
+//
+//     font-size: 32px;
+//   }
+//
+//   @media (max-width: $mobile-width) {
+//     font-size: 28px;
+//   }
+// }
 
 .services__list {
   @include reset-list();
@@ -92,6 +114,11 @@
     background-repeat: no-repeat;
   }
 
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
   @media (max-width: $tablet-width) {
     padding-top: 39px;
 
@@ -103,57 +130,94 @@
   }
 
   &--production {
-    background-image: url("#{$image-dir}/plates-production.png");
+    background-image: url("#{$image-dir}/production-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("#{$image-dir}/production-desktop@2x.png");
+    }
 
     @media (max-width: $tablet-width) {
-      background-image: url("#{$image-dir}/plates-production_tablet.png");
+      background-image: url("#{$image-dir}/production-tablet@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("#{$image-dir}/production-tablet@2x.png");
+      }
     }
 
     @media (max-width: $mobile-width) {
-      background-image: url("#{$image-dir}/plates-production_mobile.png");
+      background-image: url("#{$image-dir}/production-mobile@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("#{$image-dir}/production-mobile@2x.png");
+      }
     }
   }
 
+
   &--setup {
-    background-image: url("#{$image-dir}/plates-setup.png");
+    background-image: url("#{$image-dir}/setup-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("#{$image-dir}/setup-desktop@2x.png");
+    }
 
     @media (max-width: $tablet-width) {
-      background-image: url("#{$image-dir}/plates-setup_tablet.png");
+      background-image: url("#{$image-dir}/setup-tablet@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("#{$image-dir}/setup-tablet@2x.png");
+      }
     }
 
     @media (max-width: $mobile-width) {
-      background-image: url("#{$image-dir}/plates-setup_mobile.png");
+      background-image: url("#{$image-dir}/setup-mobile@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("#{$image-dir}/setup-mobile@2x.png");
+      }
     }
   }
 
   &--utilities {
-    background-image: url("#{$image-dir}/utilities.png");
+    background-image: url("#{$image-dir}/utilities-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("#{$image-dir}/utilities-desktop@2x.png");
+    }
 
     @media (max-width: $tablet-width) {
-      background-image: url("#{$image-dir}/utilities_tablet.png");
+      background-image: url("#{$image-dir}/utilities-tablet@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("#{$image-dir}/utilities-tablet@2x.png");
+      }
     }
 
     @media (max-width: $mobile-width) {
-      background-image: url("#{$image-dir}/utilities_mobile.png");
+      background-image: url("#{$image-dir}/utilities-mobile@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("#{$image-dir}/utilities-mobile@2x.png");
+      }
     }
   }
-}
 
-.services__service-type {
-  margin: 0;
-  padding: 0;
-  padding-right: 155px;
-  font-family: $robotocondensed-font;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.5;
-  color: $font-color--primary;
+  p {
+    margin: 0;
+    padding: 0;
+    padding-right: 155px;
+    font-family: $robotocondensed-font;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: $font-color--primary;
 
-  @media (max-width: $tablet-width) {
-    padding-right: 505px;
-  }
+    @media (max-width: $tablet-width) {
+      padding-right: 505px;
+    }
 
-  @media (max-width: $mobile-width) {
-    padding-right: 85px;
+    @media (max-width: $mobile-width) {
+      padding-right: 85px;
+    }
   }
 }

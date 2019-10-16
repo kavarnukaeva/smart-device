@@ -1,6 +1,8 @@
 .overlay {
   position: relative;
 
+  overflow: hidden;
+
   &::before {
     content: "";
     position: absolute;

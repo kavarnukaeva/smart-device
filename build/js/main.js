@@ -9,6 +9,11 @@
   var close = popup.querySelector('.modal__button-close');
   var name = popup.querySelector('[name=fullname]');
   var form = popup.querySelector('form');
+  var inputs = form.querySelectorAll('.feedback__item-fields');
+  var inputTel = form.querySelector('#modal-phone-field');
+  var storage = localStorage || null;
+  var isValid = true;
+  var formData = {};
 
   // var pageHeader = document.querySelector('.page-header');
   // var headerToggle = document.querySelector('.page-header__toggle');
@@ -56,12 +61,17 @@
     }
   });
 
-  var formData = {};
-  var storage = localStorage || null;
-  var inputs = form.querySelectorAll('.feedback__item-fields');
+  inputTel.addEventListener('input', function (evt) {
+    var target = evt.target;
+    isValid = target.value.match(/^\d+$/) ? true : false;
+  });
 
-  form.addEventListener('submit', function () {
+  form.addEventListener('submit', function (evt) {
     inputs.forEach(function (input) {
+      if (input.type === 'tel' && !isValid) {
+        evt.preventDefault();
+      }
+
       formData[input.name] = input.value;
     });
 

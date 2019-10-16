@@ -11,3 +11,16 @@
 .social__item {
   margin-right: 15px;
 }
+
+.social__link {
+  display: block;
+}
+
+.social__link-icons {
+  &:hover,
+  &:focus {
+    path {
+      fill: $brand-color;
+    }
+  }
+}
