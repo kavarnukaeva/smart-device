@@ -117,8 +117,6 @@
         </div>
       </section>
 
-
-
       <section class="feedback">
         <div class="feedback__wrapper">
           <div class="feedback__image-wrapper">
@@ -276,5 +274,37 @@
         </section>
       </div>
     </footer>
+
+    <section class="modal">
+      <button class="modal__button-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <h2 class="feedback__title">Закажите звонок</h2>
+      <p class="feedback__title-caption">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form class="feedback__form" action="#" method="post">
+        <div class="feedback__items-wrapper">
+          <p class="feedback__item feedback__item--contacts">
+            <label class="visually-hidden" for="fullname-field">Имя</label>
+            <input class="feedback__item-fields" type="text" name="fullname" id="fullname-field" placeholder="Имя" required="">
+          </p>
+          <p class="feedback__item feedback__item--contacts">
+            <label class="visually-hidden" for="phone-field">Телефон</label>
+            <input class="feedback__item-fields" type="tel" name="tel" id="phone-field" placeholder="Телефон" required="">
+          </p>
+          <p class="feedback__item feedback__item--message">
+            <label class="visually-hidden" for="message-field">Ваш вопрос</label>
+            <textarea class="feedback__item-fields" name="message" id="message-field" placeholder="Ваш вопрос" required=""></textarea>
+          </p>
+        </div>
+        <div class="feedback__footer-wrapper">
+          <button class="feedback__button" type="submit">Отправить</button>
+          <div class="feedback__checkbox-wrapper">
+            <input class="feedback__checkbox visually-hidden" type="checkbox" name="checkbox" id="feedback-checkbox" checked="">
+            <label class="feedback__checkbox-label" for="feedback-checkbox">Я согласен на обработку персональных данных</label>
+          </div>
+        </div>
+      </form>
+    </section>
+    <script src="js/script.js"></script>
   </body>
 </html>

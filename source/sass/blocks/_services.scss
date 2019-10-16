@@ -94,6 +94,8 @@
 
   @media (max-width: $tablet-width) {
     padding-top: 39px;
+
+    background-position: center center;
   }
 
   @media (max-width: $mobile-width) {
@@ -102,14 +104,38 @@
 
   &--production {
     background-image: url("#{$image-dir}/plates-production.png");
+
+    @media (max-width: $tablet-width) {
+      background-image: url("#{$image-dir}/plates-production_tablet.png");
+    }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("#{$image-dir}/plates-production_mobile.png");
+    }
   }
 
   &--setup {
     background-image: url("#{$image-dir}/plates-setup.png");
+
+    @media (max-width: $tablet-width) {
+      background-image: url("#{$image-dir}/plates-setup_tablet.png");
+    }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("#{$image-dir}/plates-setup_mobile.png");
+    }
   }
 
   &--utilities {
     background-image: url("#{$image-dir}/utilities.png");
+
+    @media (max-width: $tablet-width) {
+      background-image: url("#{$image-dir}/utilities_tablet.png");
+    }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("#{$image-dir}/utilities_mobile.png");
+    }
   }
 }
 
