@@ -1,8 +1,8 @@
 .page-main__wrapper {
   background-image: url("#{$image-dir}/polygons-group-main.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 20% -530px;
+  background-size: contain;
+  background-position: 0 -427px;
 
   @media (max-width: $tablet-width) {
     background-size: 249%;

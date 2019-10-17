@@ -1,13 +1,15 @@
 .advantages__wrapper {
   @include centerer-main();
 
-  padding-top: 108px;
+  padding-top: 111px;
 
   @media (max-width: $tablet-width) {
-    padding-top: 55px;
+    margin-bottom: 15px;
+    padding-top: 53px;
   }
 
   @media (max-width: $mobile-width) {
+    margin-bottom: 5px;
     padding-top: 37px;
   }
 }
@@ -24,7 +26,7 @@
   position: relative;
 
   width: calc(50% - 15px);
-  margin-bottom: 31px;
+  margin-bottom: 30px;
   padding-top: 40px;
   padding-left: 41px;
   padding-bottom: 66px;
@@ -34,13 +36,14 @@
 
   @media (max-width: $tablet-width) {
     padding-top: 23px;
-    padding-bottom: 19px;
+    padding-bottom: 21px;
     padding-left: 25px;
   }
 
   @media (max-width: $mobile-width) {
     width: 100%;
     margin-bottom: 20px;
+    padding-left: 22px;
     padding-bottom: 24px;
   }
 
@@ -75,6 +78,48 @@
       margin-bottom: 10px;
     }
   }
+
+  &--confidential {
+    padding-top: 42px;
+    padding-bottom: 111px;
+
+    @media (max-width: $tablet-width) {
+      padding-top: 24px;
+      padding-bottom: 53px;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding-bottom: 30px;
+
+      svg {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  &--price {
+    margin-bottom: 18px;
+    padding-bottom: 21px;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 30px;
+      padding-bottom: 33px;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding-bottom: 28px;
+
+      svg {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  &--item {
+    @media (max-width: $tablet-width) {
+      padding-top: 22px;
+    }
+  }
 }
 
 .advantages__title,
@@ -96,12 +141,13 @@
   }
 
   @media (max-width: $mobile-width) {
+    padding-right: 18px;
     font-size: 20px;
   }
 
   &--confidentiality {
-    @media (max-width: $mobile-width) {
-      padding-right: 15px;
+    @media (max-width: $tablet-width) {
+      margin-bottom: 13px;
     }
   }
 }
@@ -116,6 +162,10 @@
 
   @media (max-width: $tablet-width) {
     padding-right: 28px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-right: 24px;
   }
 
   &--suppliers {
