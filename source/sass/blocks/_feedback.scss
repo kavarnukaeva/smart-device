@@ -217,6 +217,15 @@
 .feedback__checkbox-wrapper {
   width: calc(50% - 20px);
 
+  input:focus + .feedback__checkbox-label {
+    outline: 5px auto -webkit-focus-ring-color;
+
+    &::before,
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
   @media (max-width: $mobile-width) {
     width: 100%;
   }

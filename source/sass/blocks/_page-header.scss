@@ -365,7 +365,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 9px;
+    padding-top: 44px;
     padding-left: 0;
   }
 
@@ -448,41 +448,36 @@
 }
 
 .page-header__profile-image-wrapper {
-  position: relative;
   width: 705px;
   height: 515px;
+  margin-right: -76px;
 
   @media (max-width: $tablet-width) {
     width: 485px;
     height: 340px;
+    margin-top: -35px;
+    margin-right: 0;
+    margin-left: -11px;
   }
 
   @media (max-width: $mobile-width) {
     width: 300px;
     height: 220px;
+    padding-top: 71px;
+    padding-left: 22px;
   }
 
   img {
-    position: absolute;
-    top: -5px;
-    left: -22px;
-
     display: block;
     min-width: 705px;
     height: 515px;
 
     @media (max-width: $tablet-width) {
-      top: -36px;
-      left: -13px;
-
-      min-width: 260px;
+      min-width: 465px;
       height: 340px;
     }
 
     @media (max-width: $mobile-width) {
-      top: 37px;
-      left: 12px;
-
       min-width: 294px;
       height: 220px;
     }

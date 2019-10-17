@@ -62,7 +62,7 @@
 
     @media (max-width: $mobile-width) {
       flex-direction: column;
-      margin-bottom: 49px;
+      margin-bottom: 47px;
       padding-right: 15px;
       padding-left: 15px;
     }
@@ -222,13 +222,6 @@
 }
 
 .page-footer__list-item {
-  &:hover,
-  &:focus {
-    a {
-      color: $brand-color;
-    }
-  }
-
   @media (max-width: $mobile-width) {
     padding-right: 5px;
   }
@@ -241,6 +234,11 @@
   font-family: $brand-font;
   color: #1b2d37;
   opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    color: $brand-color;
+  }
 }
 
 .page-footer__confidentiality {
@@ -324,12 +322,15 @@
     }
   }
 
-  &--confidentiality-link {
+  &--confidentiality-link,
+  &--copyright {
     &:hover,
     &:focus {
       color: $brand-color;
     }
+  }
 
+  &--confidentiality-link {
     @media (max-width: $mobile-width) {
       margin-bottom: 25px;
     }
