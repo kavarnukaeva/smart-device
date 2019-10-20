@@ -1,14 +1,12 @@
 .feedback {
-  background-image: url("#{$image-dir}/polygons-group-form.png"),
-    url("#{$image-dir}/airplane@1x.png");
+  background-image: url("#{$image-dir}/polygons-group-form.png");
   background-repeat: no-repeat;
-  background-size: 100%, 27%;
-  background-position: 0 62%, 25% 42%;
+  background-size: cover;
+  background-position: 0 62%;
   background-color: $brand-color;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("#{$image-dir}/polygons-group-form.png"),
-      url("#{$image-dir}/airplane@2x.png");
+    background-image: url("#{$image-dir}/polygons-group-form.png");
   }
 
   @media (max-width: $tablet-width) {
@@ -20,13 +18,29 @@
   @include centerer-main();
 
   display: flex;
+
+  background-image: url("#{$image-dir}/airplane@1x.png");
+  background-repeat: no-repeat;
+  background-size: 511px 288px;
+  background-position: 0 42%;
+
+  @media (max-width: 1150px) {
+    background-position: -20% 42%;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("#{$image-dir}/airplane@2x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    background: none;
+  }
 }
 
 .feedback__form-wrapper {
-  width: 50%;
+  width: 570px;
   margin-left: auto;
   padding-top: 92px;
-  padding-left: 13px;
 
   @media (max-width: $tablet-width) {
     width: calc(100% - 120px);
@@ -95,7 +109,8 @@
     padding-top: 14px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.2);
-    border: 0;
+    border: none;
+    border-radius: unset;
     color: $font-color--primary;
 
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */

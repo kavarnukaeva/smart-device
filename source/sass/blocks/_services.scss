@@ -6,7 +6,7 @@
   @include centerer-main();
 
   padding-top: 90px;
-  padding-bottom: 127px;
+  padding-bottom: 128px;
 
   @media (max-width: $tablet-width) {
     padding-top: 50px;
@@ -43,6 +43,7 @@
   @include reset-list();
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   @media (max-width: $tablet-width) {
@@ -74,7 +75,7 @@
   padding-left: 43px;
 
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 
   &::before {
     content: "";

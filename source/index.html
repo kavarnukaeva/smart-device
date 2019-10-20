@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Smart Device, circuit board production">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Smart Device</title>
@@ -17,11 +18,11 @@
       <div class="page-header__wrapper">
         <div class="page-header__navigation">
             <!-- На главной ссылка неактуальна -->
-            <a class="page-header__logo">
+            <a class="logo">
               <img src="img/logo.svg" alt="Лого">
-              <span class="page-header__logo-wrapper page-header__logo-wrapper--header">
-                <span class="page-header__logo-head">Smart Device</span>
-                <span class="page-header__logo-caption">умные технологии</span>
+              <span class="logo__wrapper logo__wrapper--header">
+                <span class="logo__head">Smart Device</span>
+                <span class="logo__caption">умные технологии</span>
               </span>
             </a>
             <button class="page-header__menu-button" type="button">
@@ -44,8 +45,8 @@
         <div class="page-header__profile-info-wrapper">
           <h1>Печатные платы</h1>
           <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <button class="page-header__profile-button" type="button">Получить бесплатную консультацию</button>
-          <button class="page-header__profile-button page-header__profile-button--mobile" type="button">Бесплатная консультация</button>
+          <a class="page-header__profile-button" href="#feedback-form">Получить бесплатную консультацию</a>
+          <a class="page-header__profile-button page-header__profile-button--mobile" href="#feedback-form">Бесплатная консультация</a>
         </div>
         <div class="page-header__profile-image-wrapper">
           <picture>
@@ -137,7 +138,7 @@
           </div>
         </section>
 
-        <section class="feedback">
+        <section class="feedback" id="feedback-form">
           <h2 class="visually-hidden">Форма обратной связи</h2>
           <div class="feedback__wrapper">
             <div class="feedback__form-wrapper">
@@ -177,13 +178,13 @@
         <section class="page-footer__main">
           <h2 class="visually-hidden">Навигация по сайту и контакты</h2>
           <div class="page-footer__block-wrapper page-footer__block-wrapper--first">
-            <div class="page-footer__block-wrapper--first-wrapper">
-              <div class="page-footer__logo">
-                <a class="page-header__logo page-header__logo--footer">
+            <div class="page-footer__block-wrapper-inner">
+              <div class="logo logo--footer">
+                <a class="logo__link">
                   <img src="img/logo.svg" alt="Лого">
-                  <span class="page-header__logo-wrapper page-header__logo-wrapper--footer">
-                    <span class="page-header__logo-head page-header__logo-head--footer">Service Device</span>
-                    <span class="page-header__logo-caption page-header__logo-caption--footer">умные технологии</span>
+                  <span class="logo__wrapper">
+                    <span class="logo__head">Service Device</span>
+                    <span class="logo__caption">умные технологии</span>
                   </span>
                 </a>
               </div>
@@ -227,29 +228,34 @@
                   </button>
                 </div>
 
-                <ul class="page-footer__list page-footer__list--navigation">
-                  <li class="page-footer__list-item">
-                    <a href="#">О компании</a>
-                  </li>
-                  <li class="page-footer__list-item">
-                    <a href="#">Продукты</a>
-                  </li>
-                  <li class="page-footer__list-item">
-                    <a href="#">Производство печатных плат</a>
-                  </li>
-                  <li class="page-footer__list-item">
-                    <a href="#">Монтаж печатных плат</a>
-                  </li>
-                  <li class="page-footer__list-item">
-                    <a href="#">Комплектующие</a>
-                  </li>
-                  <li class="page-footer__list-item">
-                    <a href="#">Доставка</a>
-                  </li>
-                  <li class="page-footer__list-item">
-                    <a href="#">Контакты</a>
-                  </li>
-                </ul>
+                <div class="page-footer__list__wrapper">
+                  <ul class="page-footer__list">
+                    <li class="page-footer__list-item">
+                      <a href="#">О компании</a>
+                    </li>
+                    <li class="page-footer__list-item">
+                      <a href="#">Продукты</a>
+                    </li>
+                    <li class="page-footer__list-item">
+                      <a href="#">Производство печатных плат</a>
+                    </li>
+                    <li class="page-footer__list-item">
+                      <a href="#">Монтаж печатных плат</a>
+                    </li>
+                  </ul>
+
+                  <ul class="page-footer__list">
+                    <li class="page-footer__list-item">
+                      <a href="#">Комплектующие</a>
+                    </li>
+                    <li class="page-footer__list-item">
+                      <a href="#">Доставка</a>
+                    </li>
+                    <li class="page-footer__list-item">
+                      <a href="#">Контакты</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </nav>
 
@@ -296,7 +302,6 @@
     </footer>
 
     <section class="modal">
-      <h2 class="visually-hidden">Закажите обратный звонок</h2>
       <button class="modal__button-close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>

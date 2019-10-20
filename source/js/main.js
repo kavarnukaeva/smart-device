@@ -10,10 +10,11 @@
   var name = popup.querySelector('[name=fullname]');
   var form = popup.querySelector('form');
   var inputs = form.querySelectorAll('.feedback__item-fields');
-  var inputTel = form.querySelector('#modal-phone-field');
+  var inputsTel = document.querySelectorAll('[type="tel"]');
+  var toggles = document.querySelectorAll('.accordeon__button');
   var storage = localStorage || null;
-  var isValid = true;
   var formData = {};
+  var testText;
 
   // var pageHeader = document.querySelector('.page-header');
   // var headerToggle = document.querySelector('.page-header__toggle');
@@ -61,17 +62,26 @@
     }
   });
 
-  inputTel.addEventListener('input', function (evt) {
-    var target = evt.target;
-    isValid = target.value.match(/^\d+$/) ? true : false;
+  [].forEach.call(inputsTel, function (input) {
+    input.addEventListener('input', function (evt) {
+      var target = evt.target;
+
+      checkValue(target);
+    });
   });
 
-  form.addEventListener('submit', function (evt) {
-    inputs.forEach(function (input) {
-      if (input.type === 'tel' && !isValid) {
-        evt.preventDefault();
-      }
+  var checkValue = function (input) {
+    testText = input.value;
 
+    /* eslint-disable */
+    if (testText * 1 != input.value) {
+    /* eslint-enable */
+      input.value = testText.substring(0, testText.length - 1);
+    }
+  };
+
+  form.addEventListener('submit', function () {
+    inputs.forEach(function (input) {
       formData[input.name] = input.value;
     });
 
@@ -86,4 +96,17 @@
       input.value = parsedUserData[input.name];
     });
   }
+
+  [].forEach.call(toggles, function (toggle) {
+    toggle.addEventListener('click', function () {
+      var item = toggle.closest('.accordeon__item');
+
+      if (item.classList.contains('accordeon__item--opened')) {
+        item.classList.remove('accordeon__item--opened');
+      } else {
+        item.classList.add('accordeon__item--opened');
+      }
+    });
+  });
+
 })();

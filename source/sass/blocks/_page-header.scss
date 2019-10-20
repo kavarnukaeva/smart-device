@@ -9,7 +9,7 @@
   background-image: url("#{$image-dir}/background-pattern.png"),
     url("#{$image-dir}/polygons-group.png");
   background-repeat: no-repeat;
-  background-size: cover, 100%;
+  background-size: cover, cover;
   background-position: left, 0 0;
 
   overflow: hidden;
@@ -74,80 +74,6 @@
   @media (max-width: $mobile-width) {
     margin-right: 25px;
   }
-}
-
-.page-header__logo {
-  position: relative;
-
-  display: flex;
-  flex-wrap: wrap;
-
-  @media (max-width: $mobile-width) {
-    padding-left: 2px;
-  }
-
-  img {
-    width: 52px;
-    height: 52px;
-    margin-right: 14px;
-
-    @media (max-width: $tablet-width) {
-      margin-right: 16px;
-    }
-
-    @media (max-width: $mobile-width) {
-      width: 38px;
-      height: 38px;
-    }
-  }
-
-  &--footer {
-    img {
-      @media (max-width: $mobile-width) {
-        width: 52px;
-        height: 52px;
-        margin-right: 15px;
-      }
-    }
-  }
-}
-
-.page-header__logo-wrapper {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  padding-top: 6px;
-
-  @media (max-width: $tablet-width) {
-    padding-top: 7px;
-  }
-
-  &--header {
-    @media (max-width: $mobile-width) {
-      display: none;
-    }
-  }
-}
-
-.page-header__logo-head {
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 1.2;
-  font-family: $robotocondensed-font;
-  color: $font-color--primary;
-
-  &--footer {
-    color: #000000;
-  }
-}
-
-.page-header__logo-caption {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.2;
-  font-family: $roboto-font;
-  color: #788891;
 }
 
 .page-header__menu-button {
@@ -399,7 +325,7 @@
 
     margin-bottom: 44px;
     padding-left: 94px;
-    padding-right: 15px;
+    padding-right: 10px;
 
     font-weight: 400;
     font-size: 22px;
@@ -485,9 +411,10 @@
 }
 
 .page-header__profile-button {
+  display: block;
+  padding: 18px 25px;
+  max-width: 410px;
   margin-left: 90px;
-  padding: 18px 46px;
-
   font-weight: 700;
   font-size: 16px;
   line-height: 1.2;
@@ -508,6 +435,9 @@
     background-color: rgba(0, 178, 255, 0.7);
   }
 
+  @media (max-width: 1150px) {
+    margin-left: auto;
+  }
 
   @media (max-width: $tablet-width) {
     margin-bottom: 160px;

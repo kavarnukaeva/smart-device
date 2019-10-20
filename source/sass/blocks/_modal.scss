@@ -8,7 +8,7 @@
   max-width: 490px;
   max-height: 605px;
   margin: 0 auto;
-  padding: 35px 40px;
+  padding: 31px 40px;
 
   background-color: $brand-color;
   transform: translateX(-50%);
@@ -16,7 +16,7 @@
   & > h2 {
     position: relative;
     margin: 0;
-    margin-bottom: 9px;
+    margin-bottom: 12px;
     font-weight: 400;
     font-size: 28px;
     line-height: 1.4;
@@ -36,7 +36,7 @@
 
   & > p {
     margin: 0;
-    margin-bottom: 17px;
+    margin-bottom: 16px;
     padding-right: 7px;
     font-weight: 400;
     font-size: 16px;
@@ -49,9 +49,17 @@
     }
   }
 
+  .feedback__form {
+    padding-left: 0;
+  }
+
+  .feedback__items-wrapper {
+    margin-bottom: 11px;
+  }
+
   .feedback__item {
     width: 100%;
-    margin-bottom: 23px;
+    margin-bottom: 17px;
 
     input,
     textarea {
@@ -59,7 +67,7 @@
     }
 
     textarea {
-      min-height: 100px;
+      min-height: 103px;
     }
   }
 
@@ -75,12 +83,14 @@
     }
 
     .feedback__checkbox-label {
+      padding-left: 0;
+
       &::before {
         left: -50px;
       }
 
       &::after {
-        left: -47px;
+        left: -46px;
       }
     }
 
@@ -92,8 +102,8 @@
 
 .modal__button-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 22px;
+  right: 18px;
 
   display: block;
   width: 17px;
