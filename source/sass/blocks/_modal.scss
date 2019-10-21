@@ -10,7 +10,6 @@
   margin: 0 auto;
   padding: 31px 40px;
 
-  background-color: $brand-color;
   transform: translateX(-50%);
 
   & > h2 {
@@ -139,4 +138,9 @@
 
 .modal-show {
   display: block;
+}
+
+.modal.feedback {
+  background: none;
+  background-color: $brand-color;
 }

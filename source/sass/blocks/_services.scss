@@ -6,7 +6,7 @@
   @include centerer-main();
 
   padding-top: 90px;
-  padding-bottom: 128px;
+  padding-bottom: 100px;
 
   @media (max-width: $tablet-width) {
     padding-top: 50px;
@@ -44,21 +44,27 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-right: -30px;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
+    margin-right: 0;
   }
 }
 
 .services__item-wrapper {
-  width: calc(33% - 15px);
+  width: 33.333%;
   height: 620px;
+  margin-bottom: 28px;
+  padding-right: 30px;
 
   @media (max-width: $tablet-width) {
     width: 100%;
     height: 256px;
+    margin-right: 0;
     margin-bottom: 45px;
+    padding-right: 0;
   }
 
   @media (max-width: $mobile-width) {

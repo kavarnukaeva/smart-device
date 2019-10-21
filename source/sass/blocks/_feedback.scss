@@ -208,8 +208,7 @@
   color: $font-color--primary;
   cursor: pointer;
 
-  background: none;
-
+  background-color: $brand-color;
   border: 1px solid #ffffff;
   border-radius: 5px;
 
@@ -259,6 +258,7 @@
   font-family: $brand-font;
   color: $font-color--primary;
   opacity: 0.8;
+  cursor: pointer;
 
   &::before {
     content: "";

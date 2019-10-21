@@ -47,6 +47,7 @@
           <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
           <a class="page-header__profile-button" href="#feedback-form">Получить бесплатную консультацию</a>
           <a class="page-header__profile-button page-header__profile-button--mobile" href="#feedback-form">Бесплатная консультация</a>
+          <button class="page-header__scroll" type="button">Скролл вниз</button>
         </div>
         <div class="page-header__profile-image-wrapper">
           <picture>
@@ -63,7 +64,7 @@
 
     <main class="page-main">
       <div class="page-main__wrapper">
-        <section class="advantages">
+        <section class="advantages" id="advantages-section">
           <h2 class="visually-hidden">Преимущества</h2>
           <div class="advantages__wrapper">
             <ul class="advantages__list">
@@ -228,7 +229,7 @@
                   </button>
                 </div>
 
-                <div class="page-footer__list__wrapper">
+                <div class="page-footer__list-wrapper">
                   <ul class="page-footer__list">
                     <li class="page-footer__list-item">
                       <a href="#">О компании</a>
@@ -301,7 +302,7 @@
       </div>
     </footer>
 
-    <section class="modal">
+    <section class="modal feedback">
       <button class="modal__button-close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
@@ -331,6 +332,17 @@
         </div>
       </form>
     </section>
+    <script src="https://unpkg.com/imask"></script>
+    <script type="text/javascript">
+      var elements = document.querySelectorAll('[type="tel"]');
+      var maskOptions = {
+        mask: '+{7}(000)000-00-00'
+      };
+
+      [].forEach.call(elements, function (element) {
+        IMask(element, maskOptions);
+      });
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>

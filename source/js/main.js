@@ -10,11 +10,11 @@
   var name = popup.querySelector('[name=fullname]');
   var form = popup.querySelector('form');
   var inputs = form.querySelectorAll('.feedback__item-fields');
-  var inputsTel = document.querySelectorAll('[type="tel"]');
   var toggles = document.querySelectorAll('.accordeon__button');
+  var scrollLink = document.querySelector('.page-header__scroll');
+  var advantages = document.querySelector('#advantages-section');
   var storage = localStorage || null;
   var formData = {};
-  var testText;
 
   // var pageHeader = document.querySelector('.page-header');
   // var headerToggle = document.querySelector('.page-header__toggle');
@@ -62,24 +62,6 @@
     }
   });
 
-  [].forEach.call(inputsTel, function (input) {
-    input.addEventListener('input', function (evt) {
-      var target = evt.target;
-
-      checkValue(target);
-    });
-  });
-
-  var checkValue = function (input) {
-    testText = input.value;
-
-    /* eslint-disable */
-    if (testText * 1 != input.value) {
-    /* eslint-enable */
-      input.value = testText.substring(0, testText.length - 1);
-    }
-  };
-
   form.addEventListener('submit', function () {
     inputs.forEach(function (input) {
       formData[input.name] = input.value;
@@ -109,4 +91,15 @@
     });
   });
 
+  var scrollTo = function (element) {
+    window.scroll({
+      behavior: 'smooth',
+      left: 0,
+      top: element.offsetTop
+    });
+  };
+
+  scrollLink.addEventListener('click', function () {
+    scrollTo(advantages);
+  });
 })();
